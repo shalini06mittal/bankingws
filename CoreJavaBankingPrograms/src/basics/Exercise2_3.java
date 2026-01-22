@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Exercise2_3 {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         // Array declaration and initialization
@@ -12,7 +13,7 @@ public class Exercise2_3 {
         int[] shares = {10, 5, 15, 3, 20};
 
         System.out.println("=== Stock Portfolio ===");
-        System.out.println("Stock\tPrice\t\tShares\tValue");
+        System.out.println("Stock\t\tPrice\t\tShares\t\tValue");
         System.out.println("=".repeat(50));
 
         double totalPortfolioValue = 0;
@@ -21,8 +22,13 @@ public class Exercise2_3 {
         for (int i = 0; i < stockNames.length; i++) {
             double stockValue = stockPrices[i] * shares[i];
             totalPortfolioValue += stockValue;
-
-            System.out.printf("%s\t$%.2f\t\t%d\t$%.2f%n",
+            /**
+             * %-10s   → left-aligned String, width 10
+             * $%-11.2f → currency with 2 decimals, width 11
+             * %-10d   → integer, width 10
+             * %n      → new line
+             */
+            System.out.printf("%-10s $%-11.2f %-10d $%-11.2f%n",
                     stockNames[i], stockPrices[i], shares[i], stockValue);
         }
 
