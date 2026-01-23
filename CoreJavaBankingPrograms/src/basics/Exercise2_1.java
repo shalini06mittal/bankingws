@@ -6,6 +6,19 @@ public class Exercise2_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        double salary, increment;
+
+        System.out.println("Enter starting salary: ");
+        salary = scanner.nextDouble();
+
+        System.out.println("Enter annual increment percentage: ");
+        increment = scanner.nextDouble();
+
+        for (int year = 1; year <= 5; year++) {
+            salary = salary + (salary * increment / 100);
+            System.out.printf("Salary after year %d = %.2f\n", year, salary);
+        }
+
         System.out.println("=== Investment Growth Projection ===");
         System.out.print("Enter initial investment: $");
         double principal = scanner.nextDouble();
