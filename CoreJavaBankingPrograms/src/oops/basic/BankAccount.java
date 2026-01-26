@@ -3,7 +3,6 @@ package oops.basic;
 public class BankAccount {
     int accountNumber;
     String accountHolderName;
-
     double balance;
     boolean isActive;
 
