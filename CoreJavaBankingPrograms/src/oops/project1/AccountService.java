@@ -1,10 +1,14 @@
 package oops.project1;
 
+
+
 public class AccountService {
     private AccountDAO accountDAO;
 
+    // Dependency injection
     public AccountService() {
-        this.accountDAO = new AccountDAO();
+        this.accountDAO = new AccountDAO();// in memory database
+        // MYSQL?
     }
 
     // Business method: Deposit money

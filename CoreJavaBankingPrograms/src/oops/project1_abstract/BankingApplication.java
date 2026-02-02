@@ -41,11 +41,13 @@ public class BankingApplication {
         accounts[1] = fd;
 
         System.out.println("\nAll accounts (using parent reference):");
-        for (BankAccount account : accounts) {
+        for (BankAccount account : accounts) {// savings account
             System.out.println("\n--- Account " + account.getAccountNumber() + " ---");
             System.out.println(account);
-            System.out.println(account.calculateInterest());
+            System.out.println(account.calculateInterest());//
         }
+
+
 
 
     }

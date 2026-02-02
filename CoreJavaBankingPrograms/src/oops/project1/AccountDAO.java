@@ -11,8 +11,8 @@ public class AccountDAO {
         accountCount = 0;
 
         // Pre-populate with some data
-        createAccount(new BankAccount(1001, "John Doe",  5000));
-        createAccount(new BankAccount(1002, "Jane Smith",  3000));
+        createAccount(new BankAccount(1001, "John Doe", 5000));
+        createAccount(new BankAccount(1002, "Jane Smith", 3000));
         createAccount(new BankAccount(1003, "Bob Johnson", 10000));
     }
 

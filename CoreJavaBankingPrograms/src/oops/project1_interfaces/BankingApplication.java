@@ -1,6 +1,15 @@
 package oops.project1_interfaces;
 
 import java.util.Scanner;
+
+/**
+ * Create an interface Payment with a pay() method that returns boolean
+ * Create 2 classes CreditCard and Neft that implements Payment interface and
+ * provide implementation of pay() method depending on type of payment
+ * Create a class PaymentService that has a method sendPayment(). This method calls
+ * pay() method of respective class depending on the object of Payment
+ */
+
 public class BankingApplication {
     public static void main(String[] args) {
 

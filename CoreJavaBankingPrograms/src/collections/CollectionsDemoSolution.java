@@ -2,7 +2,7 @@ package collections;
 
 import java.util.*;
 
-public class CollectionsDemo {
+public class CollectionsDemoSolution {
     public static void main(String[] args) {
 
 
@@ -15,10 +15,18 @@ public class CollectionsDemo {
         transactions.add(new Transaction("TXN003", 1001, "DEPOSIT", 2000, "Salary credit"));
         transactions.add(new Transaction("TXN004", 1002, "TRANSFER", 500, "To savings"));
 
-        // Get totaql transactions
+        System.out.println("Total transactions: " + transactions.size());
+        System.out.println("\nAll transactions:");
+        for (Transaction t : transactions) {
+            System.out.println(t);
+        }
 
-        // Print all transactiopns
+        // Accessing by index
+        System.out.println("\nFirst transaction: " + transactions.get(0));
 
+        // Removing
+        transactions.remove(1);  // Remove by index
+        System.out.println("\nAfter removing index 1: " + transactions.size() + " transactions");
 
         // 2. LinkedList - Better for frequent insertions/deletions
         System.out.println("\n" + "=".repeat(60));
