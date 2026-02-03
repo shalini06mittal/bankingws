@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>String Demo</title>
+</head>
+<body>
+	
+	<h1>Student List</h1>
+	<ul id='names'>
+
+	</ul>
+	<script type="text/javascript">
+		var students=['Brijesh','Ishaan','Nia','Yashvi','Aira','Nicika','Vansh']
+
+		for (var i = 0 ;i<students.length;i++)
+		{
+			var liele = document.createElement('li');
+			var ulele = document.getElementById('names');
+			liele.innerHTML = students[i].toUpperCase();
+			ulele.appendChild(liele)
+		}
+		
+
+	</script>
+</body>
+</html>

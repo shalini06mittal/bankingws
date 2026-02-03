@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .main {
+            width: 40%;
+        }
+        .col-md-5{
+            color:brown;
+            font-size: 20px;
+            margin-bottom: 40px;
+            border: 2px solid black;
+            padding: 20px;
+            margin-right: 10px;
+        }
+        img{
+
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Display Movies</h1>
+        
+        <div class="mb-3">
+            <button class="btn btn-warning" onclick="display()">Display Movie Details</button>
+        </div>
+        <!-- <img src=" https://www.techgatha.com/images/covers/overthemoon.jpg"/> -->
+        <div id="res"></div>
+    </div>
+   
+    <script>
+        function display()
+        {
+            var ele = document.getElementById('res');
+            let str=`<div class='row'>`
+            fetch('https://www.techgatha.com/movies.php')
+            .then(res=>res.json())
+            .then(movies=>{
+                movies.forEach(movie=>{
+                    str+=`
+                    <div class='col-md-5'>
+                        <p><img src=${movie.cover} class='img-fluid'></p>
+                        <p>Name : ${movie.name}</p>
+                        <p>Description : ${movie.desc}</p>
+                       
+                    </div>
+                    `
+                })
+                str+='</div>'
+                ele.innerHTML = str
+            })
+            
+        }
+    </script>
+</body>
+
+</html>

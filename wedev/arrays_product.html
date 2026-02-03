@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <title>String Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    #header {
+      padding: 20px;
+      width: 80%;
+      margin: auto;
+      border: 1px solid burlywood;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="header">
+      <h1>Add new Product</h1>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Name<sup>*</sup></label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+        <span class="error"></span>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Brand<sup>*</sup></label>
+        <input type="text" class="form-control" id="brand" name="brand" placeholder="Brand" />
+        <span class="error"></span>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Description</label>
+        <input type="text" class="form-control" id="desc" name="esc" placeholder="desc" />
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Cost In INR<sup>*</sup></label>
+        <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost In INR" />
+        <span class="error"></span>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Rating</label>
+        <div class="row g-3">
+
+          <div class="col-md-2">
+            5: <input type="text" class="form-control" id="r5" name="r5"/>
+          </div>
+          <div class="col-md-2">
+            4: <input type="text" class="form-control" id="r4" name="r4" />
+          </div>
+          <div class="col-md-2">
+            3: <input type="text" class="form-control" id="r3" name="r3" />
+          </div>
+          <div class="col-md-2">
+            2: <input type="text" class="form-control" id="r2" name="r2" />
+          </div>
+          <div class="col-md-2">
+            1: <input type="text" class="form-control" id="r1" name="r1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" onclick="addProduct()" class="btn btn-success">Add Product</button>
+      </div>
+
+    </div>
+   
+    <div id="product"></div>
+  </div>
+  <script src="product_script.js"></script>
+
+  <!-- <script type="text/javascript">
+      
+      		var names=[]
+      		var costinrupees = []
+      		for(var i=0;i<5;i++)
+      		{
+      			names.push(prompt('Enter name of product '+(i+1)));
+      			costinrupees.push(prompt('Enter cost in INR for product '+(i+1)));
+      		}
+      	
+      		costinUSA=[];
+          costinUK=[];
+      		
+      		for(var i=0;i<costinrupees.length;i++)
+      		{
+      			var index = i;
+      			for(var j=i+1;j<costinrupees.length;j++)
+      			{
+      				if(costinrupees[index] > costinrupees[j])
+      				index = j;
+      			}
+      			var t = costinrupees[index]
+      			costinrupees[index] = costinrupees[i];
+      			costinrupees[i] = t;
+
+      			var t1 = names[index]
+      			names[index] = names[i];
+      			names[i] = t1;
+      		}
+          for(var i=0;i<5;i++)
+      		{
+      			costinUSA.push(costinrupees[i] * 70);
+      		}
+          for(var i=0;i<5;i++)
+      		{
+      			costinUK.push(costinrupees[i] * 85);
+      		}
+      		console.log(costinUK);
+      		document.write(`<table border='1'><tr><th>Name</th><th>Cost In INR</th><th>Cost In USA $</th><th>Cost In UK £</th</tr>`)
+      		for(var i=0;i<names.length;i++)
+      		{
+      			document.write("<tr><td>"+names[i]+"</td>");
+      			document.write("<td>"+costinrupees[i]+"</td>");
+      			document.write("<td>"+costinUSA[i]+"</td>");
+            document.write("<td>"+costinUK[i]+"</td></tr>");
+      		}
+      		document.write("</table>");
+
+      	
+    </script> -->
+</body>
+
+</html>
